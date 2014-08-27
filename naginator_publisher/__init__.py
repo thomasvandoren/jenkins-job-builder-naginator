@@ -40,11 +40,11 @@ def naginator(parser, xml_parent, data):
         'com.chikli.hudson.plugin.naginator.NaginatorPublisher'
     )
 
-    XML.SubElement(root, 'maxSchedule').text = data.get('max-retries', 0)
+    XML.SubElement(root, 'maxSchedule').text = str(data.get('max-retries', 0))
 
     rerun_if_unstable = data.get('rerun-if-unstable', False)
     XML.SubElement(root, 'rerunIfUnstable').text = str(
-        rereun_if_unstable).lower()
+        rerun_if_unstable).lower()
 
     delay = data.get('delay', {})
     fixed = delay.get('fixed')
@@ -61,16 +61,16 @@ def naginator(parser, xml_parent, data):
     if fixed is not None:
         delay_root.set('class',
                        'com.chikli.hudson.plugin.naginator.FixedDelay')
-        XML.SubElement(delay_root, 'delay').text = fixed.get('delay', 0)
+        XML.SubElement(delay_root, 'delay').text = str(fixed.get('delay', 0))
     elif progressive is not None:
         delay_root.set(
             'class', 'com.chikli.hudson.plugin.naginator.ProgressiveDelay')
 
         prg_increment = progressive.get('increment', 0)
-        XML.SubElement(delay_root, 'increment').text = prg_increment
+        XML.SubElement(delay_root, 'increment').text = str(prg_increment)
 
         prg_maximum = progressive.get('maximum', 0)
-        XML.SubElement(delay_root, 'max').text = prg_maximum
+        XML.SubElement(delay_root, 'max').text = str(prg_maximum)
 
     check_regexp = data.get('check-regexp', False)
     XML.SubElement(root, 'checkRegexp').text = str(check_regexp).lower()
