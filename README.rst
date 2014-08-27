@@ -5,8 +5,9 @@ Python module that extends `jenkins-job-builder
 <http://ci.openstack.org/jenkins-job-builder/>`_ to support new publisher,
 ``naginator``.
 
-.. image:: https://travis-ci.org/thomasvandoren/jenkins-job-builder-naginator.svg
-    :target: https://travis-ci.org/thomasvandoren/jenkins-job-builder-naginator
+.. raw:: html
+
+    <a href="https://travis-ci.org/thomasvandoren/jenkins-job-builder-naginator" target="_blank"><img src="https://travis-ci.org/thomasvandoren/jenkins-job-builder-naginator.svg"></a>
 
 Naginator Publisher
 -------------------
