@@ -8,7 +8,7 @@ def naginator(parser, xml_parent, data):
     """yaml: naginator
     Automatically reschedule a build after a build failure. Requires the
     Jenkins `Naginator Plugin
-    <https://wiki.jenkins-ci.org/display/JENKINS/Naginator+Plugina>`_
+    <https://wiki.jenkins-ci.org/display/JENKINS/Naginator+Plugin>`_
 
     :arg int max-retries: Limits successive failed build retries. Set to 0 for
         no limit. Default is 0.
