@@ -54,3 +54,7 @@ target/
 
 # Sphinx output
 /doc/_build
+
+# pbr build output
+/AUTHORS
+/ChangeLog
