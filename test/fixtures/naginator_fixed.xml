@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <publishers>
+    <com.chikli.hudson.plugin.naginator.NaginatorPublisher>
+      <maxSchedule>3</maxSchedule>
+      <rerunIfUnstable>true</rerunIfUnstable>
+      <delay class="com.chikli.hudson.plugin.naginator.FixedDelay">
+        <delay>10</delay>
+      </delay>
+      <checkRegexp>false</checkRegexp>
+      <regexpForRerun/>
+    </com.chikli.hudson.plugin.naginator.NaginatorPublisher>
+  </publishers>
+</project>

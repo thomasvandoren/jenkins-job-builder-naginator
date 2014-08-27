@@ -1,0 +1,9 @@
+# Error - cannot specify both fixed and progressive.
+publishers:
+  - naginator:
+      delay:
+        fixed:
+          delay: 5
+        progressive:
+          increment: 5
+          maximum: 25

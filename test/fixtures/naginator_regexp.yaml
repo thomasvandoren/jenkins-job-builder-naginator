@@ -1,0 +1,5 @@
+publishers:
+  - naginator:
+      max-retries: 5
+      check-regexp: true
+      regexp-for-rerun: '^\[ERROR.*'

@@ -1,0 +1,7 @@
+publishers:
+  - naginator:
+      max-retries: 3
+      rerun-if-unstable: true
+      delay:
+        fixed:
+          delay: 10

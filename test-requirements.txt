@@ -1,0 +1,8 @@
+discover
+fixtures
+flake8
+python-subunit
+testscenarios
+testrepository
+testtools
+tox
