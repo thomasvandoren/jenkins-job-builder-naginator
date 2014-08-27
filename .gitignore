@@ -51,3 +51,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Sphinx output
+/doc/_build

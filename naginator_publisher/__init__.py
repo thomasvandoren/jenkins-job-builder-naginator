@@ -11,24 +11,35 @@ def naginator(parser, xml_parent, data):
     <https://wiki.jenkins-ci.org/display/JENKINS/Naginator+Plugin>`_
 
     :arg int max-retries: Limits successive failed build retries. Set to 0 for
-        no limit. Default is 0.
+      no limit. Default is 0.
     :arg bool rerun-if-unstable: Rerun build for unstable builds as well as
-        failures. Default is false.
-    :arg dict delay: Must specify either fixed or progressive. Default is fixed
-        with delay of 0.
-        :delay:
-            * **fixed** (`dict`)
-                :fixed: * **delay** (`int`) seconds to wait before retrying,
-                            default is 0.
-            * **progressive** (`dict`) Progressively delay before retrying
-                build. The delay starts at *increment* seconds and grows by
-                ``increment * number of consecutive failures`` up to the
-                maximum value, then remains at *maximum*. e.g. (5, 10, 20,
-                35, 55, ..., maximum) seconds.
-                :progressive: * **increment** (`int`) - default is 0
-                              * **maximum** (`int`) - default is 0
+      failures. Default is false.
+    :arg dict delay:
+
+            :delay: Must specify either fixed or progressive. Default is fixed
+              with delay of 0.
+
+                * **fixed** (`dict`)
+
+                       :fixed:
+
+                           * **delay** (`int`) seconds to wait before
+                             retry. Default is 0.
+
+                * **progressive** (`dict`)
+
+                        :progressive: Progressively delay before retrying
+                          build. The delay starts at *increment* seconds and
+                          grows by ``increment * number of consecutive
+                          failures`` up to the maximum value, then remains at
+                          *maximum*. e.g. (5, 10, 20, 35, 55, ..., maximum)
+                          seconds.
+
+                            * **increment** (`int`) - default is 0
+                            * **maximum** (`int`) - default is 0
+
     :arg bool check-regexp: Only rerun build if regular expression is found in
-        output. Default is false.
+      output. Default is false.
     :arg str regexp-for-rerun: Regular expression to search for.
 
     Example:
