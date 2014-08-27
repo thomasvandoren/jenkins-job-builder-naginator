@@ -18,7 +18,8 @@ def naginator(parser, xml_parent, data):
         with delay of 0.
         :delay:
             * **fixed** (`dict`)
-                :fixed: * **delay** (`int`) seconds to wait before retrying (default: 0)
+                :fixed: * **delay** (`int`) seconds to wait before retrying,
+                            default is 0.
             * **progressive** (`dict`) Progressively delay before retrying
                 build. The delay starts at *increment* seconds and grows by
                 ``increment * number of consecutive failures`` up to the
@@ -32,7 +33,7 @@ def naginator(parser, xml_parent, data):
 
     Example:
 
-    .. literalinclude:: /../test/FIXME
+    .. literalinclude:: /../test/fixtures/naginator_fixed.yaml
 
     """
     root = XML.SubElement(
@@ -75,7 +76,7 @@ def naginator(parser, xml_parent, data):
     check_regexp = data.get('check-regexp', False)
     XML.SubElement(root, 'checkRegexp').text = str(check_regexp).lower()
 
-    if not data.has_key('regexp-for-rerun'):
+    if 'regexp-for-rerun' not in data:
         XML.SubElement(root, 'regexpForRerun')
     else:
-        XML.SubElement(root, 'regexpForRerun').text = data.get('regexp-for-rerun')
+        XML.SubElement(root, 'regexpForRerun').text = data['regexp-for-rerun']
