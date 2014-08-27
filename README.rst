@@ -5,15 +5,10 @@ Python module that extends `jenkins-job-builder
 <http://ci.openstack.org/jenkins-job-builder/>`_ to support new publisher,
 ``naginator``.
 
-.. raw:: html
+Documentation
+-------------
 
-    <a href="https://travis-ci.org/thomasvandoren/jenkins-job-builder-naginator" target="_blank"><img src="https://travis-ci.org/thomasvandoren/jenkins-job-builder-naginator.svg"></a>
-
-Naginator Publisher
--------------------
-
-.. automodule:: naginator_publisher
-    :members:
+Please see http://jenkins-job-builder-naginator.readthedocs.org/
 
 Installation
 ------------
