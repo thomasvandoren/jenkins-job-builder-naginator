@@ -8,20 +8,26 @@ Python module that extends `jenkins-job-builder
 Naginator Publisher
 -------------------
 
-TODO: include docs about using naginator publisher.
+.. automodule:: naginator_publisher
 
 Installation
 ------------
 
-TODO: include install docs.
+.. code-block:: bash
+
+    pip install jenkins-job-builder-naginator
 
 Development
 -----------
 
-To work on this project, install the dependency:
+To work on this project, install the dependencies, install the develop branch,
+make change, and run tests with tox:
 
 .. code-block:: bash
 
-    pip install -r requirements.txt
+    pip install -r requirements.txt -r test-requirements.txt
+    python setup.py develop
+    # ... make changes ...
+    tox
 
 .. note:: It is best to use a virtualenv for developing this package.
